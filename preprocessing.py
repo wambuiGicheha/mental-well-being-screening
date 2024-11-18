@@ -9,10 +9,10 @@ import numpy as np  # Optional: For handling array transformations
 import pandas as pd
 
 # Ensure necessary NLTK resources are downloaded
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
-
+nltk.download('punkt')  # Downloads Punkt tokenizer
+nltk.download('punkt_tab')  # Ensures punkt_tab is available
+nltk.download('stopwords')  # Ensure stopwords are available
+nltk.download('wordnet')  # Ensure WordNet is available for lemmatization
 
 # Initialize stopwords, punctuation, and lemmatizer
 stop_words = set(stopwords.words('english'))

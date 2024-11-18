@@ -1,14 +1,15 @@
-import streamlit as st
-import joblib
+
 import nltk
 from preprocessing import TextPreprocessor  # Assuming you have a custom preprocessing class
-
-
-# Ensure the stopwords are downloaded
-nltk.download('stopwords')
+import streamlit as st
+import joblib
 
 # Ensure the stopwords are downloaded
-nltk.download('stopwords')
+nltk.download('punkt')  # Downloads Punkt tokenizer
+nltk.download('punkt_tab')  # Ensures punkt_tab is available
+nltk.download('stopwords')  # Ensure stopwords are available
+nltk.download('wordnet')  # Ensure WordNet is available for lemmatization
+
 
 # Load the trained machine learning pipeline
 pipeline = joblib.load('models/sentiments_pipeline.pkl')
