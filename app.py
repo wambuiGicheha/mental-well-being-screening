@@ -1,7 +1,8 @@
 import streamlit as st
 import joblib
-from preprocessing import TextPreprocessor  # Assuming you have a custom preprocessing class
 import nltk
+from preprocessing import TextPreprocessor  # Assuming you have a custom preprocessing class
+
 
 # Ensure the stopwords are downloaded
 nltk.download('stopwords')

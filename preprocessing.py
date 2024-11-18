@@ -1,23 +1,24 @@
-import re
-import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+import string
+
 from sklearn.base import TransformerMixin, BaseEstimator
 from nltk.tokenize import word_tokenize
 import numpy as np  # Optional: For handling array transformations
 import pandas as pd
 
+# Ensure necessary NLTK resources are downloaded
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 
 # Initialize stopwords, punctuation, and lemmatizer
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
-# Ensure necessary NLTK resources are downloaded
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
+
 
 class TextPreprocessor(BaseEstimator, TransformerMixin):
     def __init__(self):
