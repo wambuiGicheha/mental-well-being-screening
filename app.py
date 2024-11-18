@@ -1,6 +1,13 @@
 import streamlit as st
 import joblib
 from preprocessing import TextPreprocessor  # Assuming you have a custom preprocessing class
+import nltk
+
+# Ensure the stopwords are downloaded
+nltk.download('stopwords')
+
+# Ensure the stopwords are downloaded
+nltk.download('stopwords')
 
 # Load the trained machine learning pipeline
 pipeline = joblib.load('models/sentiments_pipeline.pkl')
